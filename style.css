@@ -1,0 +1,124 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header styles */
+header {
+  background-color: #004466;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #006699;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main section styles */
+main {
+  padding: 20px;
+}
+
+/* Each section box */
+section {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+/* Section headers */
+section h2 {
+  margin-bottom: 10px;
+  color: #004466;
+}
+
+/* Lists */
+ul, ol {
+  margin-left: 20px;
+}
+
+/* Links */
+a {
+  color: #006699;
+}
+
+/* Contact Form Styles */
+form {
+  margin-top: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #004466;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #006699;
+}
+
+/* Footer */
+footer {
+  background-color: #004466;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 40px;
+}

@@ -1,20 +1,19 @@
-/* Reset some default browser styles */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* General body styles */
+/* General */
 body {
-    font-family: 'Open Sans', sans-serif;
-
-  background-color: #f4f4f4;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f4f4;
   color: #333;
   line-height: 1.6;
 }
 
-/* Header styles */
+/* Header */
 header {
   background-color: #004466;
   color: white;
@@ -26,7 +25,7 @@ header h1 {
   margin-bottom: 0.5rem;
 }
 
-/* Navigation styles */
+/* Navigation */
 nav {
   background-color: #006699;
   text-align: center;
@@ -35,10 +34,12 @@ nav {
 
 nav ul {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav ul li {
-  display: inline-block;
   margin: 0 10px;
 }
 
@@ -52,23 +53,39 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Main section styles */
+/* Main */
 main {
   padding: 20px;
 }
 
-/* Each section box */
 section {
   background-color: white;
   padding: 20px;
   margin-bottom: 20px;
-  border-radius: 5px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease forwards;
 }
 
-/* Section headers */
+section:nth-of-type(even) {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section headings */
 section h2 {
   margin-bottom: 10px;
   color: #004466;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #006699;
+  padding-bottom: 5px;
 }
 
 /* Lists */
@@ -76,12 +93,97 @@ ul, ol {
   margin-left: 20px;
 }
 
-/* Links */
-a {
-  color: #006699;
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
 }
 
-/* Contact Form Styles */
+.projects-list li {
+  background-color: #f9f9f9;
+  border-left: 4px solid #004466;
+  padding: 15px;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+
+.projects-list li:hover {
+  transform: scale(1.02);
+}
+
+/* Buttons & CV */
+.cv-btn {
+  display: inline-block;
+  background-color: #004466;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cv-btn:hover {
+  background-color: #006699;
+}
+
+/* Language Cards */
+.language-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.card {
+  background-color: #e6f2f8;
+  border: 2px solid #006699;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #d0ecfa;
+}
+
+.card span {
+  display: block;
+  font-size: 14px;
+  color: #004466;
+  margin-top: 8px;
+}
+
+/* connect with me  */
+.social-icons {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  padding-left: 0;
+}
+
+.social-icons li a {
+  font-size: 50px;
+  color: #004466;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons li a:hover {
+  color: #006699;
+  transform: scale(1.2);
+}
+
+
+
+/* Contact Form */
 form {
   margin-top: 20px;
 }
@@ -95,23 +197,44 @@ form label {
 form input,
 form textarea {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 form button {
-  background-color: #004466;
+  background: linear-gradient(to right, #006699, #004466);
   color: white;
+  font-weight: bold;
   padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  letter-spacing: 1px;
 }
 
 form button:hover {
+  background: #003344;
+}
+
+/* Back to top */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   background-color: #006699;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #004466;
 }
 
 /* Footer */
@@ -121,4 +244,15 @@ footer {
   text-align: center;
   padding: 1rem;
   margin-top: 40px;
+}
+
+/* Responsive Nav */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
 }
